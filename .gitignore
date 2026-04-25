@@ -29,6 +29,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+debug_log.txt
+temp_frontend.txt
+temp_*.txt
 
 # env files (prevent secrets from leaking)
 .env
