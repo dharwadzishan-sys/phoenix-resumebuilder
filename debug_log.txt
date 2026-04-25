@@ -1,0 +1,35 @@
+Testing Backend... 
+
+added 1 package, and audited 347 packages in 6s
+
+8 vulnerabilities (4 low, 4 critical)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+ 
+Testing Frontend Build (to catch hidden errors)... 
+▲ Next.js 16.2.4 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 9.3s
+  Running TypeScript ...
+Failed to type check.
+
+./src/components/InterviewEngine.tsx:1136:29
+Type error: Type '(skillOverride?: SkillOption) => Promise<void>' is not assignable to type 'MouseEventHandler<HTMLButtonElement>'.
+  Types of parameters 'skillOverride' and 'event' are incompatible.
+    Type 'MouseEvent<HTMLButtonElement, MouseEvent>' is missing the following properties from type 'SkillOption': label, category, mode
+
+  [90m1134 |[0m
+  [90m1135 |[0m                   <div className=[32m"ie-results-actions"[0m>
+[31m[1m>[0m [90m1136 |[0m                     <button onClick={handleStart} className=[32m"ie-start-btn"[0m>
+  [90m     |[0m                             [31m[1m^[0m
+  [90m1137 |[0m                       <[33mPlay[0m size={[35m16[0m} /> [33mTry[0m [33mAgain[0m
+  [90m1138 |[0m                     </button>
+  [90m1139 |[0m                     <button onClick={handleReset} className=[32m"ie-icon-btn ie-reset-btn-lg"[0m>
+Next.js build worker exited with code: 1 and signal: null
+ 
+Starting Next.js Dev Server Verification... 
